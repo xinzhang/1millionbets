@@ -8,8 +8,9 @@ import (
 )
 
 func main() {
-	flags.Parse()
+
 	runtime.GOMAXPROCS(runtime.NumCPU())
+	flags.Parse()
 
 	fmt.Println("port has value ", *flags.Port)
 	fmt.Println("server has value ", *flags.Server)
